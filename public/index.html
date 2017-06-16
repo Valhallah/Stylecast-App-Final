@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- google login -->
+      <meta name="google-signin-client_id" content="676416527258-61om5nlj7brpvd563v0hcs5vbqcnd3k8.apps.googleusercontent.com">
+      <!-- Facebook Meta Tags -->
+      <meta property="og:url" content="https://sleepy-caverns-19209.herokuapp.com/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Stylecast"/>
+      <meta property="og:description" content="Weather forecast app to style your hair!" />
+      <meta property="og:image" content="https://image.freepik.com/free-icon/woman-with-long-hair_318-56970.jpg"/>
+      <!-- Title -->
+      <title>Stylecast</title>
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+      <!-- Firebase -->
+      <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Krona+One" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+   </head>
+   <body>
+      <nav>
+         <div class="nav-wrapper z-depth-3 red lighten-2 col s12 m6 l6 hide-on-med-and-down">
+            <a href="index.html" class="brand-logo logo-font left" style="color: black;">Stylecast</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#modal1">LOGIN</a></li>
+                <li><a href="#modal2">REGISTER</a></li>
+            </ul>
+        </div>
+        <div class="nav-wrapper red lighten-2 hide-on-med-and-up show-on-medium-and-down">
+            <a href="#" class="brand-logo logo-font left" style="color: black;">Stylecast</a>
+            <ul id="nav-mobile">
+                <li class="right"><a href="#modal1">LOGIN</a></li>
+                <li class="right"><a href="#modal2">REGISTER</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Modal 1 Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>LOGIN</h4>
+            <input id="emailL" type="email" class="validate">
+            <p id="login-mark"></p>
+            <label for="emailL">email</label>
+            <input id="passwordL" type="password" class="validate">
+            <label for="passwordL">password</label>
+            <div>
+                <br><br>
+                <!-- <div>Log-in with</div> -->
+                <!-- <a href="#" <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"><img src="facebook (2).png" alt="facebook" style="margin: 10px;"></a>
+                <a href="#"><img src="google-plus.png" alt="google" style="margin: 10px;" class="g-signin2" data-onsuccess="onSignIn"></a> -->
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                <br>
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" class="fb-login-button button-fb" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true">
+         		    </fb:login-button>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="hairQuestions.html" class="modal-action modal-close waves-effect waves-green btn-flat btn-go"> GO </a>
+        </div>
+    </div>
+    <!-- modal 2 structure-->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h4>REGISTER</h4>
+            <input id="emailR" type="email" class="validate">
+            <p id="register-mark"></p>
+            <label for="emailR">email</label>
+            <input id="passwordR" type="password" class="validate">
+            <label for="passwordR">password</label>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="registerUser">SIGN UP</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col m12 s12 center">
+            <a href="#">
+                <div class="logo-font"></div>
+            </a>
+        </div>
+    </div>
+    <!-- weather animation -->
+    <div class="container center">
+        <div id="image-holder"></div>
+    </div>
+    <!-- bun-girl image -->
+    <br>
+    <div class="container center">
+        <img id="bunGirl" width="90" src="assets/images/bun1.png">
+    </div>
+    <div class="container center" style="width: 500px;">
+        <div class="row">
+            <div class="col s10 m12">
+               <div id="index-card" class="card teal teal lighten-2">
+                  <div class="card-content">
+                     <p>The app that gives you all the information you need to keep your hair looking great no matter what the weather has in store.</p>
+                  </div>
+               </div>
+            </div>
+        </div>
+    </div>
+    <!-- google login -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="assets/javascript/fbLogin.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>
